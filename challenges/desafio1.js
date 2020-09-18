@@ -7,6 +7,5 @@ db.movies.aggregate([
     }
   },
   { $project: { _id: false, diretor: '$_id', filmes: '$filmes' } },
-  { $sort: { filmes: 1, diretor: 1 } },
-  { $limit: 10 }
+  { $sort: { filmes: -1, diretor: 1 } }
 ]);
