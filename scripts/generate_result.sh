@@ -22,6 +22,7 @@ mkdir "$RESULTS_DIR"
 touch "$RESULTS_DIR/evaluation.out"
 
 print_results() {
+  printf "hello there!"
   printf "\n======================= RESULTS ======================="
   printf "$(cat /tmp/trybe-results/evaluation.out)"
   printf "\n======================= RESULTS =======================\n"
