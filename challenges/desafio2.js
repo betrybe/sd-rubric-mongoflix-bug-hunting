@@ -21,5 +21,3 @@ db.movies.aggregate([
   { $sort: { total: -1 } },
   { $limit: 1 }
 ]);
-
-//
