@@ -14,7 +14,7 @@ db.movies.aggregate([
       _id: '$genres',
       total: { $sum: 1 },
       mediaIMDB: { $avg: '$imdb.rating' },
-      votosIMDB: { $sum: '$imdb.vote' }
+      votosIMDB: { $sum: '$imdb.votes' }
     }
   },
   { $project: { _id: false, total: '$total', genres: true, mediaIMDB: { $round: ['$mediaIMDB', 1] }, votosIMDB: '$votosIMDB' } },
